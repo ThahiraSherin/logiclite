@@ -1,0 +1,58 @@
+/* Navbar logo styling */
+.navbar-logo {
+  width: 208px;
+  height: 48px;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Navbar link transitions */
+.nav-link {
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+  margin: 0 0.25rem;
+}
+
+/* Active link styling with gradient text and underline */
+.nav-link.active {
+  font-weight: 600;
+  background-image: linear-gradient(to right, #2c84d6, #33b5e4);
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #2c84d6, #33b5e4);
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.nav-link:not(.active):hover {
+  color: #33b5e4 !important;
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  
+  .nav-link.active::after {
+    width: 50%;
+    left: 25%;
+  }
+}

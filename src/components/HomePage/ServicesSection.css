@@ -1,0 +1,30 @@
+#services {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#services::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #e0f7fa, #f3e5f5, #e1f5fe, #fff3e0);
+  background-size: 400% 400%;
+  animation: animateBg 20s ease infinite;
+  z-index: 0;
+  opacity: 0.25;
+}
+
+@keyframes animateBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#services > .container {
+  position: relative;
+  z-index: 2;
+}

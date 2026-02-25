@@ -1,0 +1,670 @@
+/* General Career Page Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.careers-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.careers-section {
+  padding: 80px 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0a192f;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  z-index: 1000;
+  transform-origin: left;
+}
+
+/* Section Divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(75, 108, 183, 0.5), transparent);
+  transform-origin: center;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Hero Section */
+.careers-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.careers-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.careers-hero p.lead {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-down-btn {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-down-btn:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Floating shapes animation */
+.hero-background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-shape {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  border-radius: 50%;
+}
+
+.floating-shape:nth-child(2n) {
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+}
+
+.floating-shape:nth-child(3n) {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+
+/* Why Join Us Section */
+.why-join-us {
+  background-color: #f1f5fd;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.feature-item {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e7ee;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover::before {
+  transform: scaleX(1);
+}
+
+.icon-wrapper {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  font-size: 3.5rem;
+  color: white;
+}
+
+.feature-item h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #182848;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Open Positions Section */
+.open-positions {
+  background-color: #ffffff;
+}
+
+.positions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.position-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e7ee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.position-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.position-card:hover::after {
+  transform: scaleX(1);
+}
+
+.position-card h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #0a192f;
+}
+
+.position-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.btn-apply {
+  background-color: #4b6cb7;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-apply::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-apply:hover::before {
+  left: 100%;
+}
+
+.btn-apply:hover {
+  background-color: #182848;
+}
+
+/* Life at Company Section */
+.life-at-company {
+    background-color: #f1f5fd;
+    padding-bottom: 80px;
+}
+
+.life-at-company .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.life-at-company .section-title {
+    margin-bottom: 10px;
+}
+
+.life-at-company .section-subtitle {
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.life-images {
+    display: flex;
+    gap: 30px;
+    max-width: 950px;
+    margin-top: 30px;
+}
+
+.image-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.image-with-caption img {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 8px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.image-with-caption p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 600;
+}
+
+/* How to Apply Section */
+.how-to-apply {
+  background-color: #ffffff;
+}
+
+.hiring-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.step {
+  position: relative;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  flex: 1;
+  overflow: hidden;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4b6cb7, #182848);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.step:hover::before {
+  transform: scaleY(1);
+}
+
+.step-icon {
+  font-size: 3rem;
+  color: #4b6cb7;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.step-number {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.step h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0a192f;
+}
+
+.step p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Call to Action Section */
+.call-to-action {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.call-to-action h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.call-to-action p.cta-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background-color: white;
+  color: #4b6cb7;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-cta:hover {
+  background-color: #eef3ff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Application Form Modal Styles */
+.application-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.application-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #0a192f;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #dc3545;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #0a192f;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.1);
+}
+
+.form-group input[type="file"] {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.file-info {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .positions-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .position-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+  }
+  
+  .hiring-process-steps {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+    .careers-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .careers-hero p.lead {
+        font-size: 1.2rem;
+        color: white;
+    }
+    
+    .life-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-with-caption img {
+        max-width: 100%;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hiring-process-steps {
+        flex-direction: column;
+    }
+}

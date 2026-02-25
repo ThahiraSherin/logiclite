@@ -1,0 +1,110 @@
+div,
+p {
+  caret-color: transparent;
+}
+
+/* restore caret for form elements */
+input,
+textarea {
+  caret-color: auto;
+}
+
+.video-slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* PRIMARY CTA BUTTON (Start Your Growth Journey) */
+.video-slider-container .btn-primary {
+  background-color: #4f7cff;
+  border-color: #4f7cff;
+  transition: all 0.3s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+.video-slider-container .btn-primary:hover {
+  background-color: #2f5bd3;      /* darker blue */
+  border-color: #2f5bd3;
+  transform: translateY(-2px);    /* lift effect */
+  box-shadow: 0 10px 25px rgba(79, 124, 255, 0.45);
+}
+
+.video-slider-container .btn-primary:hover {
+  box-shadow:
+    0 0 0 4px rgba(79, 124, 255, 0.25),
+    0 10px 25px rgba(79, 124, 255, 0.45);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+  /* Remove native appearance */
+   border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; 
+}
+
+/* Remove browser controls bar completely */
+ video::-webkit-media-controls,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-panel,
+video::-moz-media-controls {
+  display: none !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.overlay h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.button-group .btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+}
+
+.about-icon-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.about-icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+
+.bg-video {
+  filter: brightness(0.85) contrast(1.05) saturate(1.05);
+}

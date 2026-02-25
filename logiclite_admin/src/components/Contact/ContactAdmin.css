@@ -1,0 +1,100 @@
+.contact-admin-page {
+  width: 100%;
+}
+
+.content-header {
+  margin-bottom: 20px;
+}
+
+.content-header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.messages-table {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header, .table-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 3fr 1fr 0.5fr;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.table-row {
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.table-row:hover {
+  background-color: #f4f7f9;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.col-sender {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.col-sender div {
+  display: flex;
+  align-items: center;
+}
+
+.col-sender svg {
+  margin-right: 5px;
+  color: #3498db;
+}
+
+.col-message {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-actions .btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #e74c3c;
+  transition: color 0.2s;
+}
+
+.col-actions .btn-icon:hover {
+  color: #c0392b;
+}
+
+.no-messages {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .table-header, .table-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
