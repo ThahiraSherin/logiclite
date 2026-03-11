@@ -108,3 +108,54 @@ video::-moz-media-controls {
 .bg-video {
   filter: brightness(0.85) contrast(1.05) saturate(1.05);
 }
+
+/* Stats Section */
+.stats-section {
+  background: #f8f9fa;
+}
+
+/* Stat Card */
+.stat-box {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 15px;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Animation */
+.stat-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Number */
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Number hover effect */
+.stat-box:hover .stat-number {
+  transform: scale(1.15);
+  color: #3a7bd5;
+}
+
+/* Text */
+.stat-text {
+  font-size: 0.95rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2rem;
+  }
+}

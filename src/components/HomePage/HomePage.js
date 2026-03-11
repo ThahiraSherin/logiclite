@@ -13,6 +13,8 @@ import staffVideo from "../../assets/staff.mp4";
 import taxVideo from "../../assets/tax.mp4";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import PortfolioSection from "./PortfolioSection";
+import TechStackSection from "./TechStackSection";
 
 const videoData = [
   {
@@ -122,12 +124,48 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      
+      {/* STATS SECTION */}
+        <section className="stats-section py-5 text-center">
+          <div className="container">
+            <div className="row">
+
+              <div className="col-md-4 mb-4">
+                <div className="stat-box">
+                  <h2 className="stat-number">3+</h2>
+                  <p className="stat-text">Years of Experience</p>
+                </div>
+              </div>
+
+              <div className="col-md-4 mb-4">
+                <div className="stat-box">
+                  <h2 className="stat-number">85+</h2>
+                  <p className="stat-text">Satisfied Clients</p>
+                </div>
+              </div>
+
+              <div className="col-md-4 mb-4">
+                <div className="stat-box">
+                  <h2 className="stat-number">142+</h2>
+                  <p className="stat-text">Successful Projects</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
 
       {/* ABOUT */}
       <AboutSection />
 
       {/* SERVICES */}
       <ServicesSection />
+
+      {/* PORTFOLIO */}
+      <PortfolioSection />
+
+      {/* TECH STACK */}
+      <TechStackSection />
 
       {/* CONTACT */}
       <ContactSection
