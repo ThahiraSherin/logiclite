@@ -2,52 +2,52 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./HomePage.css"; // Ensure you have this CSS file
-import AboutSection from "./AboutSection"; // Adjust path as needed
-import ServicesSection from "./ServicesSection"; // Adjust path as needed
-import ContactSection from "./ContactSection"; // Adjust path as needed
+import "./HomePage.css";
+
+import AboutSection from "./AboutSection";
+import ServicesSection from "./ServicesSection";
+import PortfolioSection from "./PortfolioSection";
+import TechStackSection from "./TechStackSection";
+import ContactSection from "./ContactSection";
+import TestimonialsSection from "./TestimonialsSection";
 
 import digitalVideo from "../../assets/digital.mp4";
 import softwareVideo from "../../assets/software.mp4";
 import staffVideo from "../../assets/staff.mp4";
 import taxVideo from "../../assets/tax.mp4";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import PortfolioSection from "./PortfolioSection";
-import TechStackSection from "./TechStackSection";
 
 const videoData = [
   {
     src: digitalVideo,
     title: "Grow Your Brand with Digital Marketing",
-    subtitle: "Attract, engage, and convert customers using data-driven and AI-powered marketing strategies.",
+    subtitle: "Attract, engage, and convert customers using AI-driven strategies.",
     btn1: "Start Your Growth Journey",
     path1: "/contact",
     btn2: "View Our Work",
-    path2: "/about",
+    path2: "/portfolio",
   },
   {
     src: softwareVideo,
-    title: "Build Scalable Software & Mobile Apps",
-    subtitle: "We turn your ideas into high-performance web and mobile solutions built for growth.",
+    title: "Build Scalable Software & Apps",
+    subtitle: "High-performance web & mobile solutions for growth.",
     btn1: "Start Your Project",
-    path1: "/services",
-    btn2: "Explore Solutions",
+    path1: "/contact",
+    btn2: "Explore Services",
     path2: "/services",
   },
   {
     src: staffVideo,
     title: "Scale Faster with Expert Talent",
-    subtitle: "Access skilled developers and tech professionals to strengthen your team on demand.",
+    subtitle: "Hire skilled developers on demand.",
     btn1: "Hire Experts",
     path1: "/contact",
-    btn2: "How It Works",
+    btn2: "Learn More",
     path2: "/about",
   },
   {
     src: taxVideo,
-    title: "Simplified Tax & Compliance Solutions",
-    subtitle: "Stay compliant with hassle-free GST, tax filing, and financial management services.",
+    title: "Simplified Tax & Compliance",
+    subtitle: "GST, tax filing & financial solutions made easy.",
     btn1: "Talk to an Expert",
     path1: "/contact",
     btn2: "Learn More",
@@ -86,7 +86,6 @@ const HomePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     alert("Message sent successfully!");
     setFormData({ name: "", email: "", message: "" });
   };
@@ -95,25 +94,23 @@ const HomePage = () => {
 
   return (
     <>
-      {/* VIDEO HERO */}
-      <div
-        className="video-slider-container position-relative"
-        style={{ paddingTop: "80px" }}
-      >
+      {/* HERO VIDEO */}
+      <div className="video-slider-container position-relative" style={{ paddingTop: "80px" }}>
         <video
           ref={videoRef}
           src={current.src}
           className="bg-video"
           muted
           autoPlay
-          loop={false}
           playsInline
         />
-        <div className="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center text-white px-4">
+
+        <div className="overlay d-flex flex-column justify-content-center align-items-center text-center text-white">
           <div className="container">
-            <h1 className="display-4 fw-bold mb-3">{current.title}</h1>
-            <p className="lead mb-4">{current.subtitle}</p>
-            <div className="d-flex justify-content-center flex-wrap gap-3">
+            <h1 className="display-4 fw-bold">{current.title}</h1>
+            <p className="lead">{current.subtitle}</p>
+
+            <div className="d-flex justify-content-center gap-3 flex-wrap mt-4">
               <Link to={current.path1} className="btn btn-primary btn-lg">
                 {current.btn1}
               </Link>
@@ -124,36 +121,36 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      
-      {/* STATS SECTION */}
-        <section className="stats-section py-5 text-center">
-          <div className="container">
-            <div className="row">
 
-              <div className="col-md-4 mb-4">
-                <div className="stat-box">
-                  <h2 className="stat-number">3+</h2>
-                  <p className="stat-text">Years of Experience</p>
-                </div>
+      {/* STATS */}
+      <section className="stats-section py-5 text-center">
+        <div className="container">
+          <div className="row g-3">
+
+            <div className="col-4">
+              <div className="stat-box">
+                <h2>3+</h2>
+                <p>Years Experience</p>
               </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="stat-box">
-                  <h2 className="stat-number">85+</h2>
-                  <p className="stat-text">Satisfied Clients</p>
-                </div>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="stat-box">
-                  <h2 className="stat-number">142+</h2>
-                  <p className="stat-text">Successful Projects</p>
-                </div>
-              </div>
-
             </div>
+
+            <div className="col-4">
+              <div className="stat-box">
+                <h2>85+</h2>
+                <p>Clients</p>
+              </div>
+            </div>
+
+            <div className="col-4">
+              <div className="stat-box">
+                <h2>142+</h2>
+                <p>Projects</p>
+              </div>
+            </div>
+
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* ABOUT */}
       <AboutSection />
@@ -166,6 +163,22 @@ const HomePage = () => {
 
       {/* TECH STACK */}
       <TechStackSection />
+
+      {/* ✅ TESTIMONIALS */}
+      <TestimonialsSection />
+
+      {/* ✅ CTA SECTION */}
+      <section className="cta-section text-center text-white py-5">
+        <div className="container">
+          <h2 className="mb-3">Ready to build your next project?</h2>
+          <p className="mb-4">
+            Let’s create something amazing together.
+          </p>
+          <Link to="/contact" className="btn btn-light btn-lg">
+            Get Started
+          </Link>
+        </div>
+      </section>
 
       {/* CONTACT */}
       <ContactSection
