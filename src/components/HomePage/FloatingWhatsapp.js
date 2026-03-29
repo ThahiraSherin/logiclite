@@ -5,7 +5,7 @@ const FloatingWhatsapp = () => {
   return (
     <div className="whatsapp-container">
       <a
-        href="https://wa.me/your-whatsapp-number"
+        href="https://wa.me/9352072936"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-link"
