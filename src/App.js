@@ -14,6 +14,7 @@ import Careers from './components/Career/Careers'; // Ensure this component exis
 import Footer from './components/Footer';
 import Blog from './components/Blog/Blog';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingWhatsapp from './components/HomePage/FloatingWhatsapp';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
         </Routes>
       </main>
       <Footer />
+
+    {/* FLOATING WHATSAPP */}
+      <FloatingWhatsapp />
     </Router>
   );
 }

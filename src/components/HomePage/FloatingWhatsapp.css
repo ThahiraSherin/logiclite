@@ -1,45 +1,32 @@
-/* Container Position */
 .whatsapp-container {
   position: fixed;
-  bottom: 30px;
-  right: 40px;
-  z-index: 999;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999999; /* always on top */
 }
 
-/* Link Styling */
 .whatsapp-link {
-  display: inline-block;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  padding: 10px;
   border-radius: 50%;
-  box-shadow:  4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* Hover Effect */
-.whatsapp-link:hover {
-  transform: scale(1.1);
-}
-
-/* Icon Size */
 .whatsapp-icon {
-  width: 80px;
-  height: 80px;
+  width: 55px;
+  height: 55px;
 }
 
-/* Responsive */
+/* Mobile fix */
 @media (max-width: 768px) {
   .whatsapp-container {
-    bottom: 16px;
-    right: 16px;
+    bottom: 15px;
+    right: 15px;
   }
 
-  .whatsapp-icon {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 480px) {
   .whatsapp-icon {
     width: 45px;
     height: 45px;

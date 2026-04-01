@@ -28,6 +28,42 @@
   color: #61dafb;
 }
 
+/* Global responsive and box-sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+}
+
+img, picture, video, svg, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: min(100% - 32px, 1100px);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  padding: 60px 20px;
+  min-height: auto;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 45px 16px;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

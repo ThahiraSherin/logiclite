@@ -15,7 +15,7 @@ import digitalVideo from "../../assets/digital.mp4";
 import softwareVideo from "../../assets/software.mp4";
 import staffVideo from "../../assets/staff.mp4";
 import taxVideo from "../../assets/tax.mp4";
-import FloatingWhatsapp from "./FloatingWhatsapp";
+
 
 const videoData = [
   {
@@ -181,9 +181,6 @@ const HomePage = () => {
         </div>
       </section>
       
-
-      {/* FLOATING WHATSAPP */}
-      <FloatingWhatsapp />
 
       {/* CONTACT */}
       <ContactSection

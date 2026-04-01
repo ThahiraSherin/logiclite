@@ -116,6 +116,14 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.contact-item span,
+.contact-item a {
+  word-break: break-word;
+  white-space: pre-line;
 }
 
 .contact-icon {
